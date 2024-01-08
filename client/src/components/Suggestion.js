@@ -127,21 +127,29 @@ function Suggestion() {
                                     <div className="absolute   z-10 mt-10 w-[255px] origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
                                         <div className="py-1 flex justify-between mr-5 mx-3" role="none">
                                             <a onClick={() => handleClick('Most Upvotes')} className="text-gray-700 block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-0">Most Upvotes</a>
-                                            <img src={correct} alt="coorect" />
+                                            {value1 === "Most Upvotes" &&
+                                                <img src={correct} alt="correct" />
+                                            }
                                         </div>
                                         <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
                                             <a onClick={() => handleClick('Least Upvotes')} className="text-gray-700 block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-1">Least Upvotes</a>
-                                            <img src={correct} alt="coorect" />
+                                            {value1 === "Least Upvotes" &&
+                                                <img src={correct} alt="correct" />
+                                            }
 
                                         </div>
                                         <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
                                             <a onClick={() => handleClick('Most Comments')} className="text-gray-700 block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-2">Most Comments</a>
-                                            <img src={correct} alt="coorect" />
+                                            {value1 === "Most Comments" &&
+                                                <img src={correct} alt="correct" />
+                                            }
 
                                         </div>
                                         <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
                                             <a onClick={() => handleClick('Least Comments')} className="text-gray-700 block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-3">Least Comments</a>
-                                            <img src={correct} alt="coorect" />
+                                            {value1 === "Least Comments" &&
+                                                <img src={correct} alt="correct" />
+                                            }
                                         </div>
                                     </div>
                                 )}
@@ -162,7 +170,7 @@ function Suggestion() {
                                     <div className="flex">
                                         <button className="w-[40px] h-[53px] text-[13px] table-column bg-[#F2F4FE] text-[#3A4374] font-bold hover:bg-[#CFD7FF] rounded-lg mb-2">
                                             <img className="mx-auto" src={upperarrow} alt="arrow1" />
-                                            {feedback.upvotes}
+                                            99
                                         </button>
                                         <div className="ml-8">
                                             <h4 className="text-[18px] font-bold text-[#3A4374]">
