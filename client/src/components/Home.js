@@ -352,22 +352,30 @@ function Home() {
                             <div className="absolute  z-10 mt-2 w-[255px] origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
                                 <div className="py-1 flex justify-between mr-5 mx-3" role="none">
                                     <a onClick={() => handleOptionClick('Most Upvotes')} className="text-gray-700 block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-0">Most Upvotes</a>
-                                    <img src={correct} alt="coorect" />
+                                    {value === "Most Upvotes" &&
+                                        <img src={correct} alt="correct" />
+                                    }
                                 </div>
                                 <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
                                     <a onClick={() => handleOptionClick('Least Upvotes')} className="text-gray-700 block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-1">Least Upvotes</a>
-                                    <img src={correct} alt="coorect" />
+                                    {value === "Least Upvotes" &&
+                                        <img src={correct} alt="correct" />
+                                    }
 
                                 </div>
                                 <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
                                     <a onClick={() => handleOptionClick('Most Comments')} className="text-gray-700 block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-2">Most Comments</a>
-                                    <img src={correct} alt="coorect" />
+                                    {value === "Most Comments" &&
+                                        <img src={correct} alt="correct" />
+                                    }
 
                                 </div>
                                 <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
                                     <a onClick={() => handleOptionClick('Least Comments')} className="text-gray-700 block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-3">Least Comments</a>
 
-                                    <img src={correct} alt="coorect" />
+                                    {value === "Least Comments" &&
+                                        <img src={correct} alt="correct" />
+                                    }
                                 </div>
                             </div>
                         )}
@@ -451,22 +459,30 @@ function Home() {
                                 </button>
                                 {isOpen1 && (
                                     <div className="w-[255px] origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
-                                        <div className="py-1 flex justify-between mr-5 mx-3" role="none">
-                                                <a onClick={() => handleOptionClick1('UI')} className="text-gray-700 block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-0">UI</a>
-                                            <img src={correct} alt="coorect" />
+                                            <div onClick={() => handleOptionClick1('UI')} className="py-1 flex justify-between mr-5 mx-3" role="none">
+                                                <a  className="text-gray-700 block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-0">UI</a>
+                                                {value1 === "UI" &&
+                                                    <img src={correct} alt="correct" />
+                                                }
                                         </div>
-                                        <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
-                                                <a onClick={() => handleOptionClick1('UX')} className="text-gray-700 block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-1">UX</a>
-                                            <img src={correct} alt="coorect" />
+                                            <div onClick={() => handleOptionClick1('UX')} className="py-1 flex justify-between  mr-5 mx-3" role="none">
+                                                <a className="text-gray-700 block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-1">UX</a>
+                                                {value1 === "UX" &&
+                                                    <img src={correct} alt="correct" />
+                                                }
                                         </div>
-                                        <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
-                                                <a onClick={() => handleOptionClick1('Enhancement')} className="text-gray-700 block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-2">Enhancement</a>
-                                            <img src={correct} alt="coorect" />
+                                            <div onClick={() => handleOptionClick1('Enhancement')} className="py-1 flex justify-between  mr-5 mx-3" role="none">
+                                                <a  className="text-gray-700 block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-2">Enhancement</a>
+                                                {value1 === "Enhancement" &&
+                                                    <img src={correct} alt="correct" />
+                                                }
 
                                         </div>
-                                        <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
-                                                <a onClick={() => handleOptionClick1('Bug')} className="text-gray-700 block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-3">Bug</a>
-                                            <img src={correct} alt="coorect" />
+                                            <div onClick={() => handleOptionClick1('Bug')} className="py-1 flex justify-between  mr-5 mx-3" role="none">
+                                                <a  className="text-gray-700 block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-3">Bug</a>
+                                                {value1 === "Bug" &&
+                                                    <img src={correct} alt="correct" />
+                                                }
                                         </div>
                                     </div>
                                 )}

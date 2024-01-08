@@ -83,8 +83,8 @@ function Add() {
                         </li>
 
                         <li className="mb-5">
-                            <h4 className="text-[14px] text-[#3A4374] font-bold">Feedback Title</h4>
-                            <p className="text-[14px] text-[#647196] font-medium mb-5">Add a short, descriptive headline</p>
+                            <h4 className="text-[14px] text-[#3A4374] font-bold">Category</h4>
+                            <p className="text-[14px] text-[#647196] font-medium mb-5">Choose a category for your feedback</p>
                             <div className="inline-block text-left">
                                 <button
                                     type="button"
@@ -101,23 +101,36 @@ function Add() {
                                 </button>
                                 {isOpen2 && (
                                     <div className="w-[456px] origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
-                                        <div className="py-1 flex justify-between mr-5 mx-3" role="none">
-                                            <a onClick={() => handleOptionClick2('UI')} className=" block px-4 py-2 text-[16px] text-[#647196] hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-0">UI</a>
-                                            <img src={correct} alt="coorect" />
+                                        <div onClick={() => handleOptionClick2('Feature')} className="py-1 flex justify-between mr-5 mx-3" role="none">
+                                            <a  className=" block px-4 py-2 text-[16px] text-[#647196] hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-0">Feature</a>
+                                            {value2 === "Feature" &&
+                                                <img src={correct} alt="correct" />
+                                            }
                                         </div>
-                                        <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
-                                            <a onClick={() => handleOptionClick2('UX')} className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-1">UX</a>
-                                            <img src={correct} alt="coorect" />
+                                        <div onClick={() => handleOptionClick2('UI')} className="py-1 flex justify-between mr-5 mx-3" role="none">
+                                            <a className=" block px-4 py-2 text-[16px] text-[#647196] hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-1">UI</a>
+                                            {value2 === "UI" &&
+                                                <img src={correct} alt="correct" />
+                                            }
+                                        </div>
+                                        <div onClick={() => handleOptionClick2('UX')} className="py-1 flex justify-between  mr-5 mx-3" role="none">
+                                            <a  className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-2">UX</a>
+                                            {value2 === "UX" &&
+                                                <img src={correct} alt="coorect" />
+                                            }
+                                        </div>
+                                        <div onClick={() => handleOptionClick2('Enhancement')} className="py-1 flex justify-between  mr-5 mx-3" role="none">
+                                            <a className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-3">Enhancement</a>
+                                            {value2 === "Enhancement" &&
+                                                <img src={correct} alt="correct" />
+                                            }
 
                                         </div>
-                                        <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
-                                            <a onClick={() => handleOptionClick2('Enhancement')} className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-2">Enhancement</a>
-                                            <img src={correct} alt="coorect" />
-
-                                        </div>
-                                        <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
-                                            <a onClick={() => handleOptionClick2('Bug')} className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-3">Bug</a>
-                                            <img src={correct} alt="coorect" />
+                                        <div onClick={() => handleOptionClick2('Bug')} className="py-1 flex justify-between  mr-5 mx-3" role="none">
+                                            <a className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-4">Bug</a>
+                                            {value2 === "Bug" &&
+                                                <img src={correct} alt="correct" />
+                                            }
                                         </div>
                                     </div>
                                 )}
@@ -125,8 +138,8 @@ function Add() {
                         </li>
 
                         <li className="mb-5">
-                            <h4 className="text-[14px] text-[#3A4374] font-bold">Feedback Title</h4>
-                            <p className="text-[14px] text-[#647196] font-medium  mb-5">Add a short, descriptive headline</p>
+                            <h4 className="text-[14px] text-[#3A4374] font-bold">Feedback Detail</h4>
+                            <p className="text-[14px] text-[#647196] font-medium  mb-5">Include any specific comments on what should be improved, added, etc.</p>
                             <textarea
                                 type="text"
                                 value={feedbackText}

@@ -130,24 +130,32 @@ function Edit() {
                                 </button>
                                 {isOpen3 && (
                                     <div className="w-[456px] origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
-                                        <div className="py-1 flex justify-between mr-5 mx-3" role="none">
-                                            <a onClick={() => handleOptionClick3('UI')} className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-0">UI</a>
-                                            <img src={correct} alt="coorect" />
+                                        <div onClick={() => handleOptionClick3('UI')} className="py-1 flex justify-between mr-5 mx-3" role="none">
+                                            <a  className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-0">UI</a>
+                                            {feedback.category === "UI" &&
+                                                <img src={correct} alt="correct" />
+                                            }
                                         </div>
-                                        <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
-                                            <a onClick={() => handleOptionClick3('UX')} className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-1">UX</a>
-                                            <img src={correct} alt="coorect" />
+                                        <div onClick={() => handleOptionClick3('UX')} className="py-1 flex justify-between  mr-5 mx-3" role="none">
+                                            <a  className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-1">UX</a>
+                                            {feedback.category === "UX" &&
+                                                <img src={correct} alt="correct" />
+                                            }
 
                                         </div>
-                                        <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
-                                            <a onClick={() => handleOptionClick3('Enhancement')} className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-2">Enhancement</a>
-                                            <img src={correct} alt="coorect" />
+                                        <div onClick={() => handleOptionClick3('Enhancement')} className="py-1 flex justify-between  mr-5 mx-3" role="none">
+                                            <a className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-2">Enhancement</a>
+                                            {feedback.category === "Enhancement" &&
+                                                <img src={correct} alt="correct" />
+                                            }
 
                                         </div>
-                                        <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
+                                        <div onClick={() => handleOptionClick3('Bug')} className="py-1 flex justify-between  mr-5 mx-3" role="none">
 
-                                            <a onClick={() => handleOptionClick3('Bug')} className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-3">Bug</a>
-                                            <img src={correct} alt="coorect" />
+                                            <a  className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-3">Bug</a>
+                                            {feedback.category === "Bug" &&
+                                                <img src={correct} alt="correct" />
+                                            }
                                         </div>
                                     </div>
                                 )}
@@ -173,24 +181,32 @@ function Edit() {
                                 </button>
                                 {isOpen4 && (
                                     <div className="w-[456px] origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-xl ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
-                                        <div className="py-1 flex justify-between mr-5 mx-3" role="none">
-                                            <a onClick={() => handleOptionClick4('Suggestion')} className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-0">Suggestion</a>
-                                            <img src={correct} alt="coorect" />
+                                        <div onClick={() => handleOptionClick4('Suggestion')} className="py-1 flex justify-between mr-5 mx-3" role="none">
+                                            <a  className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-0">Suggestion</a>
+                                            {feedback.status === "Suggestion" &&
+                                                <img src={correct} alt="correct" />
+                                            }
                                         </div>
-                                        <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
-                                            <a onClick={() => handleOptionClick4('Planned')} className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-1">Planned</a>
-                                            <img src={correct} alt="coorect" />
+                                        <div onClick={() => handleOptionClick4('Planned')} className="py-1 flex justify-between  mr-5 mx-3" role="none">
+                                            <a  className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-1">Planned</a>
+                                            {feedback.status === "Planned" &&
+                                                <img src={correct} alt="correct" />
+                                            }
 
                                         </div>
-                                        <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
-                                            <a onClick={() => handleOptionClick4('In-Progress')} className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-2">In-Progress</a>
-                                            <img src={correct} alt="coorect" />
+                                        <div onClick={() => handleOptionClick4('In-Progress')} className="py-1 flex justify-between  mr-5 mx-3" role="none">
+                                            <a className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-2">In-Progress</a>
+                                            {feedback.status === "In-Progress" &&
+                                                <img src={correct} alt="correct" />
+                                            }
 
                                         </div>
-                                        <div className="py-1 flex justify-between  mr-5 mx-3" role="none">
+                                        <div onClick={() => handleOptionClick4('Live')} className="py-1 flex justify-between  mr-5 mx-3" role="none">
 
-                                            <a onClick={() => handleOptionClick4('Live')} className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-3">Live</a>
-                                            <img src={correct} alt="coorect" />
+                                            <a className="text-[#647196] block px-4 py-2 text-sm hover:text-[#AD1FEA]" role="menuitem" tabIndex="-1" id="menu-item-3">Live</a>
+                                            {feedback.status === "Live" &&
+                                                <img src={correct} alt="correct" />
+                                            }
                                         </div>
                                     </div>
                                 )}

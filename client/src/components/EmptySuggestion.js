@@ -13,7 +13,7 @@ function EmptySuggestion() {
                     There is no feedback yet.
                 </h4>
                 <p className="w-[410px] text-[16px] text-[#647196] mb-5">Got a suggestion? Found a bug that needs to be squashed? We love hearing about new ideas to improve our app.</p>
-                <button class="text-sm text-[#ffffff] font-bold w-[158px] h-[44px] bg-[#AD1FEA] rounded-md">
+                <button class="text-sm text-[#ffffff] font-bold w-[158px] h-[44px] bg-[#AD1FEA] hover:bg-[#C75AF6] rounded-md">
                     <Link to="/add">+ Add Feedback</Link> 
                 </button>
             </div>
